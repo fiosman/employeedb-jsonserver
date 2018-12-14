@@ -1,7 +1,6 @@
 import {request} from './HTTPRequests';
-import {ui} from './uidisplay'
-import {alertMessage} from './uidisplay'
-import {name,age,position,salary} from './formvalidation'
+import {ui, alertMessage} from './uidisplay';
+import {name,age,position,salary} from './formvalidation';
 
 employeeName.addEventListener('blur', () => name.validationLogic());
 
