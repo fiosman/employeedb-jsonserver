@@ -9,11 +9,29 @@ employeePosition.addEventListener('blur', () => position.validationLogic());
 employeeSalary.addEventListener('blur', () => salary.validationLogic());
 
 // Retrieve employee records from RESTful database
-const getDataBtn = document.querySelector('.displayBtn');
-getDataBtn.addEventListener('click', function (e) {
+// const getDataBtn = document.querySelector('.displayBtn');
+// const updateDataBtn = document.querySelector('.updateBtn');
+const updateDataBtn = document.querySelector('.displayDataButtons')
+
+// getDataBtn.addEventListener('click', function (e) {
+//     // e.preventDefault()
+//     getData();
+//     // alertMessage.style.display = 'none'
+// })
+
+// updateDataBtn.addEventListener('click', function(e) { 
+//     // e.preventDefault();
+//     getData();
+//     // alertMessage.style.display = 'none'
+// })
+updateDataBtn.addEventListener('click', function(e) { 
     e.preventDefault()
     getData();
     alertMessage.style.display = 'none'
+    // console.log(e.target.parentElement.lastElementChild)
+    if (e.target.parentElement.lastElementChild) { 
+        ui.displayAlert(`<strong>Employee Record Updated!</strong>`,'alert-success')
+    }
 })
 
 function getData() {
@@ -86,6 +104,8 @@ function update(e) {
         ui.updateForm(recordData)
         submitBtn.style.display = 'none'
         editSubmit.style.display = 'inline-block'
+        updateDataBtn.firstElementChild.style.display = 'none'
+        updateDataBtn.lastElementChild.style.display = 'inline-block'
 
     }
 }
