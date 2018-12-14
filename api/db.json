@@ -1,25 +1,3 @@
 {
-  "employees": [
-    {
-      "name": "Fares Osman",
-      "age": "27",
-      "position": "Software Engineer",
-      "salary": "$900005",
-      "id": 1
-    },
-    {
-      "name": "Fares Osman",
-      "age": "26",
-      "position": "Software Engineer",
-      "salary": "$900005",
-      "id": 3
-    },
-    {
-      "name": "Fares Osman",
-      "age": "26",
-      "position": "Software Engineer",
-      "salary": "$90000",
-      "id": 4
-    }
-  ]
+  "employees": []
 }
