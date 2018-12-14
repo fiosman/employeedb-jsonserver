@@ -1,0 +1,43 @@
+.container { 
+    max-width: 500px;
+    margin-top: 50px;
+} 
+.cardContainer { 
+    display: inline-block;
+    margin-top: 75px;
+}
+
+.mainContainer { 
+    text-align: center;
+}
+
+.alert { 
+    display: none;
+    margin-top: 15px;
+}
+
+.displayBtn { 
+    margin-left: 5px;
+}
+
+ul { 
+    list-style-type: none;
+    padding: 0
+}
+
+li { 
+    font-size: 18px;
+}
+
+.card-text { 
+    font-size: 18px;
+}
+
+.card { 
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.completeEdit { 
+    display: none;
+} 
