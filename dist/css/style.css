@@ -20,6 +20,10 @@
     margin-left: 5px;
 }
 
+.updateBtn { 
+    display: none; 
+}
+
 ul { 
     list-style-type: none;
     padding: 0
@@ -37,3 +41,7 @@ li, .card-text {
 .completeEdit { 
     display: none;
 } 
+
+.displayDataButtons { 
+    display: inline-block;
+}
