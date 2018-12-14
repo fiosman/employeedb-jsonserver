@@ -1,6 +1,6 @@
 import {employeeName,employeeAge,employeePosition,employeeSalary} from './formvalidation'
-import {employeeCard} from './app'
-import {inputFetch} from './app'
+import {employeeCard, inputFetch} from './app'
+
 
 export const alertMessage = document.querySelector('.alert');
 
