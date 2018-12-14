@@ -1,12 +1,11 @@
-// Get Request
 class HTTPRequests {
-
+    // GET Request
     async getRequest(url) {
         const response = await fetch(url);
         const data = await response.json()
         return data;
     }
-
+    // POST Request
     async postRequest(url, data) {
         const config = {
             method: 'POST',
@@ -19,7 +18,7 @@ class HTTPRequests {
         const resData = await response.json()
         return resData;
     }
-
+    // DELETE request
     async deleteRequest(url) {
         const config = {
             method: 'DELETE',
@@ -31,6 +30,7 @@ class HTTPRequests {
         await fetch(url, config)
     }
 
+    // PUT request
     async editRequest(url, data) {
         const config = {
             method: 'PUT',

@@ -11,6 +11,7 @@ class Validation {
         this.regExp = regExp
     }
 
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
     validationLogic() {
         if (this.inputField.value) {
             if (!this.regExp.test(this.inputField.value)) {

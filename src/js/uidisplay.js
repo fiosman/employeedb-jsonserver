@@ -12,7 +12,7 @@ export class Display {
         this.employeeSalary = employeeSalary
     }
 
-    //Display data when you click display employees
+    // Display data when you click display employees
     displayData(data) {
         let displayCard = ""
         data.forEach((employee) => {
@@ -34,12 +34,14 @@ export class Display {
         employeeCard.innerHTML = displayCard;
     }
 
+    // Display alert messages upon modifying/adding employee records
     displayAlert(message, sourceClass) {
         alertMessage.classList.add(sourceClass)
         alertMessage.innerHTML = `<strong>${message}</strong>`
         alertMessage.style.display = 'block';
     }
 
+    // Clear form after submission
     displayClear() {
         inputFetch.forEach(function (item) {
             item.value = ""
@@ -47,6 +49,7 @@ export class Display {
         })
     }
 
+    // Update form fields with respective employee record information
     updateForm(data) { 
         this.employeeName.value = data.name
         this.employeeAge.value = data.age

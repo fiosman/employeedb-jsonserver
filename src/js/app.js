@@ -2,15 +2,13 @@ import {request} from './HTTPRequests';
 import {ui, alertMessage} from './uidisplay';
 import {name,age,position,salary} from './formvalidation';
 
+// Event listeners for form fields' regex validation
 employeeName.addEventListener('blur', () => name.validationLogic());
-
 employeeAge.addEventListener('blur', () => age.validationLogic());
-
 employeePosition.addEventListener('blur', () => position.validationLogic());
-
 employeeSalary.addEventListener('blur', () => salary.validationLogic());
 
-
+// Retrieve employee records from RESTful database
 const getDataBtn = document.querySelector('.displayBtn');
 getDataBtn.addEventListener('click', function (e) {
     e.preventDefault()
@@ -24,10 +22,9 @@ function getData() {
         .catch(err => console.log(err))
 }
 
-//post data
+// Post employee record to RESTful database
 export const inputFetch = document.querySelectorAll('.form-control')
 export const submitBtn = document.querySelector('.postBtn')
-
 submitBtn.addEventListener('click', function (e) {
     e.preventDefault();
     for (let i = 0; i < inputFetch.length; i++) {
@@ -56,11 +53,9 @@ export function postData() {
 }
 
 
-//dete data
-
+// Delete employee records from RESTful database
 export const employeeCard = document.querySelector('.cardContainer')
 employeeCard.addEventListener('click', deleteRecord)
-
 function deleteRecord (e) {
     if (e.target.classList.contains('deleteBtn')) {
         const id = (e.target.parentElement.dataset.id)
@@ -74,10 +69,8 @@ function deleteRecord (e) {
     }   
 }
 
-//edit 
-
+// Edit data and update RESTful database
 employeeCard.addEventListener('click', update)
-
 let targetID; 
 function update(e) { 
     if (e.target.classList.contains('editBtn')) {
