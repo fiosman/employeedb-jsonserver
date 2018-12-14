@@ -10,7 +10,7 @@ employeePosition.addEventListener('blur', () => position.validationLogic());
 
 employeeSalary.addEventListener('blur', () => salary.validationLogic());
 
-//getdata
+
 const getDataBtn = document.querySelector('.displayBtn');
 getDataBtn.addEventListener('click', function (e) {
     e.preventDefault()
@@ -49,7 +49,7 @@ export function postData() {
     request.postRequest('http://localhost:3000/employees', userData)
         .then(() => {
             alertMessage.classList.remove('alert-danger')
-            ui.displayAlert('Post Added!', 'alert-success')
+            ui.displayAlert('Employee Record Added!', 'alert-success')
             ui.displayClear();
         })
         .catch(error => console.log(error))
@@ -68,7 +68,7 @@ function deleteRecord (e) {
         .then(() => {
             e.target.parentElement.parentElement.remove()
             alertMessage.classList.remove('alert-danger')
-            ui.displayAlert('Deleted!', 'alert-success')
+            ui.displayAlert('Employee Record Deleted!', 'alert-success')
         })
         .catch(error => console.log(error))
     }   
@@ -121,7 +121,7 @@ function editData() {
     request.editRequest(`http://localhost:3000/employees/${targetID}`, updatedData)
     .then( () => { 
         alertMessage.classList.remove('alert-danger')
-        ui.displayAlert('Edited!', 'alert-success')
+        ui.displayAlert('Employee Record Edited!', 'alert-success')
     })
     .catch(err => console.log(err))
 }
