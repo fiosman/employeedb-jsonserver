@@ -26,7 +26,7 @@ class Validation {
 	}
 }
 
-export const name = new Validation(employeeName, /^[^\W^\d^_]+[\s][^\W^\d^_]+$/);
+export const name = new Validation(employeeName, /^[a-zA-Z]+[\s][a-zA-Z]+$/);
 export const age = new Validation(employeeAge, /^\d{2}$/);
-export const position = new Validation(employeePosition, /^[^\W^\d^_]+[\s]?[^\W^\d^_]+$/);
+export const position = new Validation(employeePosition, /^[a-zA-Z]+[\s]?[a-zA-Z]+$/);
 export const salary = new Validation(employeeSalary, /^[$]\d+$/);
