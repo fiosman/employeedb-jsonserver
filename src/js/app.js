@@ -9,29 +9,13 @@ employeePosition.addEventListener('blur', () => position.validationLogic());
 employeeSalary.addEventListener('blur', () => salary.validationLogic());
 
 // Retrieve employee records from RESTful database
-// const getDataBtn = document.querySelector('.displayBtn');
-// const updateDataBtn = document.querySelector('.updateBtn');
 const updateDataBtn = document.querySelector('.displayDataButtons')
 
-// getDataBtn.addEventListener('click', function (e) {
-//     // e.preventDefault()
-//     getData();
-//     // alertMessage.style.display = 'none'
-// })
 
-// updateDataBtn.addEventListener('click', function(e) { 
-//     // e.preventDefault();
-//     getData();
-//     // alertMessage.style.display = 'none'
-// })
 updateDataBtn.addEventListener('click', function(e) { 
     e.preventDefault()
     getData();
     alertMessage.style.display = 'none'
-    // console.log(e.target.parentElement.lastElementChild)
-    if (e.target.parentElement.lastElementChild) { 
-        ui.displayAlert(`<strong>Employee Record Updated!</strong>`,'alert-success')
-    }
 })
 
 function getData() {
@@ -64,7 +48,7 @@ export function postData() {
     request.postRequest('http://localhost:3000/employees', userData)
         .then(() => {
             alertMessage.classList.remove('alert-danger')
-            ui.displayAlert('Employee Record Added!', 'alert-success')
+            ui.displayAlert(`<strong>Employee Record Added!<strong>`, 'alert-success')
             ui.displayClear();
         })
         .catch(error => console.log(error))
@@ -81,7 +65,7 @@ function deleteRecord (e) {
         .then(() => {
             e.target.parentElement.parentElement.remove()
             alertMessage.classList.remove('alert-danger')
-            ui.displayAlert('Employee Record Deleted!', 'alert-success')
+            ui.displayAlert(`<strong>Employee Record Deleted!</strong>`, 'alert-success')
         })
         .catch(error => console.log(error))
     }   
@@ -134,7 +118,7 @@ function editData() {
     request.editRequest(`http://localhost:3000/employees/${targetID}`, updatedData)
     .then( () => { 
         alertMessage.classList.remove('alert-danger')
-        ui.displayAlert('Employee Record Edited!', 'alert-success')
+        ui.displayAlert(`<strong>Employee Record Edited!<strong>`, 'alert-success')
     })
     .catch(err => console.log(err))
-}
+}   
