@@ -18,10 +18,7 @@
 
 .displayBtn { 
     margin-left: 5px;
-}
-
-.updateBtn { 
-    display: none; 
+    display: inline-block;
 }
 
 ul { 
@@ -42,6 +39,3 @@ li, .card-text {
     display: none;
 } 
 
-.displayDataButtons { 
-    display: inline-block;
-}

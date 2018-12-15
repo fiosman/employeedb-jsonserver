@@ -2,7 +2,7 @@ class HTTPRequests {
     // GET Request
     async getRequest(url) {
         const response = await fetch(url);
-        const data = await response.json()
+        const data = await response.json();
         return data;
     }
     // POST Request
@@ -14,8 +14,8 @@ class HTTPRequests {
             },
             body: JSON.stringify(data)
         }
-        const response = await fetch(url, config)
-        const resData = await response.json()
+        const response = await fetch(url, config);
+        const resData = await response.json();
         return resData;
     }
     // DELETE request
@@ -27,7 +27,7 @@ class HTTPRequests {
             }
         }
 
-        await fetch(url, config)
+        await fetch(url, config);
     }
 
     // PUT request
@@ -39,10 +39,10 @@ class HTTPRequests {
             },
             body: JSON.stringify(data)
         }
-        const response = await fetch(url, config)
-        const resData = await response.json()
+        const response = await fetch(url, config);
+        const resData = await response.json();
         return resData;
     }
 }
 
-export const request = new HTTPRequests
+export const request = new HTTPRequests;
