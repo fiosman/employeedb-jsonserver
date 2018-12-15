@@ -16,7 +16,7 @@ class Validation {
 		if (this.inputField.value) {
 			if (!this.regExp.test(this.inputField.value)) {
 				this.inputField.classList.add('is-invalid');
-				ui.displayAlert(`<strong>Please ensure all fields have valid input!</strong>`, 'alert-danger')
+				ui.displayAlert(`<strong>Please ensure all fields have valid input!</strong>`, 'alert-danger');
 			} else {
 				this.inputField.classList.remove('is-invalid');
 				this.inputField.classList.add('is-valid');
