@@ -42,7 +42,7 @@ export function postData() {
 		name: employeeName.value,
 		age: employeeAge.value,
 		position: employeePosition.value,
-		salary: employeeSalary.value
+		salary: employeeSalary.value,
 	}
 	request.postRequest('http://localhost:3000/employees', userData)
 		.then(() => {
@@ -112,7 +112,7 @@ function editData() {
 		name: employeeName.value,
 		age: employeeAge.value,
 		position: employeePosition.value,
-		salary: employeeSalary.value
+		salary: employeeSalary.value,
 	}
 
 	request.editRequest(`http://localhost:3000/employees/${targetID}`, updatedData)
