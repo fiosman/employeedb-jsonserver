@@ -11,7 +11,7 @@ Ensure Node.js is installed, as it is required to run the application's dependan
 * Run webpack-dev-server ```$ npm run start```
 * Start json-server ```$ npm run json:server```. You can access employee records and see changes on ```http://localhost:3000/employees```. Each record is an object inside an array. 
     - Example record:
-        ```
+        ```javascript
          [
             {
                 "name": "John Doe",
