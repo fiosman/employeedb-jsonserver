@@ -1,6 +1,6 @@
 # Employee Records Database
 
-A CRUD application that is designed to add, delete, edit and retrieve employee records using a fake REST API [JSON-server](https://github.com/typicode/json-server). AJAX calls are all made using JavaScript's built in fetch API, with ES8 async/await syntax. 
+A CRUD application that is designed to add, delete, edit and retrieve employee records using a fake REST API [JSON-server](https://github.com/typicode/json-server). AJAX calls are all made using JavaScript's built in fetch API, with ES8 async/await syntax. The application also includes form validation using Regex. For more information on regular expressions, I recommend [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
 
 ## Getting Started
 
